@@ -1,0 +1,12 @@
+---
+name: urlscan
+ref: urlscan
+description: 'st2 content pack containing integrations for the https://urlscan.io web service'
+version: 0.1.0
+keywords:
+  - urlscan
+  - security
+  - browser
+  - headless browser
+author: Cygnetix
+email: cygnetix+github@gmail.com

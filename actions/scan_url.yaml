@@ -1,0 +1,16 @@
+---
+name: scan_url
+runner_type: python-script
+description: Submits a URL for scanning to urlscan.io
+enabled: true
+entry_point: scan_url.py
+parameters:
+  url:
+    type: string
+    description: The url of the site to scan
+    required: true
+  public:
+    type: string
+    description: Sets the whether the scan results are publically accessible or kept private
+    default: "off"
+    required: false

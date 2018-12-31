@@ -1,0 +1,6 @@
+---
+  apikey:
+    type: "string"
+    description: "An API key obtained by signing up with urlscan.io"
+    secret: true
+    required: true
