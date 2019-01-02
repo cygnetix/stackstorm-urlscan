@@ -1,0 +1,19 @@
+---
+name: "urlscan"
+pack: "urlscan"
+action_ref: "urlscan.scan_url"
+description: "Submits a URL for scanning by urlscan.io"
+formats:
+  - "urlscan {{url}}"
+result:
+  format: |
+    {% if execution.status == 'succeeded' %}
+    report: {{ execution.result.result.reportURL }}
+    screenshot: {{ execution.result.result.screenshotURL }}
+    {% else %}
+    Something went wrong:
+    ```stderr: {{ execution.result.stderr }}```
+    {% endif %}
+  extra:
+    slack:
+      image_url: "{{ execution.result.result.screenshotURL }}"
