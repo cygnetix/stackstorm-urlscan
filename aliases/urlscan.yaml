@@ -16,7 +16,4 @@ result:
     {% endif %}
   extra:
     slack:
-      image_url: |
-        {% if execution.status == 'succeeded' %}
-        "{{ execution.result.result.screenshotURL }}"
-        {% endif %}
+      image_url: "{{ execution.result.result.screenshotURL|default('') }}"
